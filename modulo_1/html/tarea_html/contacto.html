@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Biblioteca Díaz - Contacto</title>
+</head>
+<body>
+  <header>
+    <h1>Contáctanos</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="acerca.html">Acerca</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="tabla.html">Catálogo</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Formulario de contacto</h2>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Datos personales</legend>
+          <label for="nombre">Nombre completo:</label><br>
+          <input type="text" id="nombre" name="nombre" required><br><br>
+
+          <label for="correo">Correo electrónico:</label><br>
+          <input type="email" id="correo" name="correo" required><br><br>
+
+          <label for="fecha">Fecha de nacimiento:</label><br>
+          <input type="date" id="fecha" name="fecha"><br><br>
+
+          <label for="genero">Género:</label><br>
+          <input type="radio" id="masculino" name="genero" value="M"><label for="masculino">Masculino</label>
+          <input type="radio" id="femenino" name="genero" value="F"><label for="femenino">Femenino</label><br><br>
+        </fieldset>
+
+        <fieldset>
+          <legend>Preferencias</legend>
+          <label for="libros">Género favorito:</label><br>
+          <select id="libros" name="libros">
+            <option value="novela">Novela</option>
+            <option value="fantasia">Fantasía</option>
+            <option value="historia">Historia</option>
+          </select><br><br>
+
+          <label for="suscripcion">¿Deseas suscribirte al boletín?</label>
+          <input type="checkbox" id="suscripcion" name="suscripcion" value="si"><br><br>
+
+          <label for="mensaje">Mensaje:</label><br>
+          <textarea id="mensaje" name="mensaje" rows="4" cols="40"></textarea><br><br>
+        </fieldset>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <hr>
+    <p><a href="index.html">Volver al inicio</a></p>
+  </footer>
+</body>
+</html>
