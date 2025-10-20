@@ -1,0 +1,36 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    gap: 20px;
+    background-color: rgb(245, 222, 179);
+    padding: 20px;
+}
+.item:nth-child(1) {
+    background: saddlebrown;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+.item:nth-child(2) {
+    background: darkolivegreen;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+.item:nth-child(3) {
+    background: peru;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+.item:nth-child(4) {
+    background: seagreen;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+}

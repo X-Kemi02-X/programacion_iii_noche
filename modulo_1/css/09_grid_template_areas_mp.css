@@ -1,0 +1,21 @@
+.layout {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "aside main"
+        "footer footer";
+    gap: 20px;
+    grid-template-columns: 1fr 3fr;
+}
+
+header { grid-area: header; background-color: #3e4eb8; }
+aside { grid-area: aside; background-color: #7cb342; }
+main { grid-area: main; background-color: #ffb300; }
+footer { grid-area: footer; background-color: #8e24aa; }
+
+.layout > * {
+    padding: 20px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}

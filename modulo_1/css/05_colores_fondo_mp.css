@@ -1,0 +1,12 @@
+.fondo {
+    color: white;
+    background-image: url('../html/images/libros_biblioteca.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: lightblue;
+    opacity: 0.9;
+    padding: 200px;
+    text-align: center;
+    font-size: 60px;
+}
