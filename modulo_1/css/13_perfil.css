@@ -1,0 +1,25 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+.h1 {
+    color: blue;
+    text-align: center;
+}
+
+.card {
+    width: 250px;
+    text-align: center;
+    background-color: cyan;
+    padding: 20px;
+    border-radius: 12px;
+    color: black;
+
+}
+.perfil {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50px;
+    margin-bottom: 10px;
+}
