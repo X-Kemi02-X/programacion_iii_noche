@@ -1,0 +1,13 @@
+.fondo
+{
+    color: white;
+    background-image: url('../html/images/gato_meme.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: aquamarine;
+    opacity: 0.9;
+    padding: 200px;
+    text-align: center;
+    font-size: 60px;
+}

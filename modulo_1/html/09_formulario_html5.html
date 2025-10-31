@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <tittle>MI PRIMERA PAGINA KEVIN</tittle>
+    </head>
+    <body>
+        <p>
+            Formulario Html5
+        </p>
+        <form action="procesos.php" method="post">
+            <fieldset>
+                <legend>
+                    Registro de Usuario
+                </legend>
+                <table>
+                    <tr>
+                        <td>
+                            <label for="nombre">Nombre Completo</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre">
+                            <br>
+                        </td>
+                        <td>
+                            <label for="email">Correo Electronico</label>
+                            <input type="email" id="email" name="email" placeholder="Escribe tu email">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="fecha">Fecha de Nacimiento</label>
+                            <input type="date" id="fecha" name="fecha">
+                        </td>
+                        <td>
+                            <label for="color">Color favorito</label>
+                            <input type="color" id="color" name="color">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="genero">Genero</label>
+                            <input type="radio" id="m" name="genero" value="M"><label for="m">Masculino</label>
+                            <input type="radio" id="f" name="genero" value="F"><label for="f">Femenino</label>
+                        </td>
+                        <td>
+                            <label for="color">Pais</label>
+                            <select id="pais" name="pais">
+                                <option value="mx">Mexico</option>
+                                <option value="us">Estados Unidos</option>
+                                <option value="es">España</option>
+                                <option value="ar">Argentina</option>
+                                <option value="co">Colombia</option>
+                                <option value="pe">Peru</option>
+                                <option value="ve">Venezuela</option>
+                                <option value="cl">Chile</option>
+                                <option value="ec">Ecuador</option>
+                                <option value="bo">Bolivia</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="comentario">Comentarios</label>
+                            <textarea id="comentarios" name="comentarios" rows="4" cols="40"></textarea>
+                            <br>
+                        </td>
+                        <td>
+                            <input type="checkbox" id="acepto" name="acepto" required>
+                            <label for="acepto">Acepto Terminos y Condiciones</label>
+                        </td>
+                    </tr>
+                </table>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpiar">
+            </fieldset>
+        </form>
+    </body>
+</html>

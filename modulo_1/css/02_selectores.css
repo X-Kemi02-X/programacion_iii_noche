@@ -1,0 +1,23 @@
+h1 {
+    color:rgb(212, 0, 255);
+}
+
+.tipos_clase{
+    color: brown
+}
+
+#selector_id{
+    color: green
+}
+
+* {
+    margin: 0;
+}
+
+div p {
+    color: blue;
+}
+
+ul > li {
+    color: orange;
+}
