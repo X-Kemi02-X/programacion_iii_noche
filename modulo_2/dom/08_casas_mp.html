@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestor de Préstamos de la Biblioteca MP</title>
+  <style>
+      .prestamo {
+          border: 1px solid #ccc;
+          padding: 15px;
+          margin-bottom: 10px;
+          border-radius: 5px;
+      }
+      .prestamo h3 {
+          margin-top: 0;
+          color: #007bff;
+      }
+      .prestamo .acciones button {
+          background-color: #dc3545;
+          color: white;
+          border: none;
+          padding: 5px 10px;
+          cursor: pointer;
+          border-radius: 3px;
+      }
+  </style>
+</head>
+<body>
+
+  <h1>Registro de Préstamos de Libros</h1>
+
+  <form id="formulario-prestamo">
+    <input type="text" id="titulo-libro" placeholder="Título del Libro" required>
+    <input type="text" id="usuario" placeholder="Nombre del Usuario" required>
+    <input type="date" id="fecha-devolucion" placeholder="Fecha de Devolución" required>
+    <button type="submit">Registrar Préstamo</button>
+  </form>
+
+  <section id="contenedorPrestamos"></section>
+
+  <script src="08_casas_mp.js"></script>
+</body>
+</html>

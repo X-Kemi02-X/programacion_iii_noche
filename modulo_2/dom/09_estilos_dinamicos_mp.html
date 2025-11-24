@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Indicador de Capacidad de la Biblioteca MP</title>
+  <style>
+    #indicador-capacidad {
+      width: 150px;
+      height: 150px;
+      background-color: #008000; /* Verde inicial (Baja ocupación) */
+      border-radius: 50%;
+      transition: all 0.5s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Control de Capacidad de la Biblioteca</h1>
+
+  <div id="indicador-capacidad">Baja</div>
+
+  <div style="margin-top:30px;">
+    <button onclick="cambiarEstadoOcupacion()">🚨 Cambiar Estado (Color)</button>
+    <button onclick="aumentarCapacidadVisual()">📊 Aumentar Aforo (Tamaño)</button>
+    <button onclick="reiniciarEstado()">✅ Reiniciar Estado</button>
+  </div>
+
+  <script src="09_estilos_dinamicos_mp.js"></script>
+</body>
+</html>
