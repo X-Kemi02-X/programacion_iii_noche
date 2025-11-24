@@ -10,6 +10,9 @@ yarn-error.log*
 # Carpeta de build de NestJS y Node.js
 **/dist/
 
+# CARPETA QUE CAUSA EL ERROR
+modulo_3/nestjs/blog-backend/
+
 # Archivos de entorno con variables sensibles
 **/.env
 **/.env.local
