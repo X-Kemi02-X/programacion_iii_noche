@@ -9,18 +9,19 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.BasicsService = void 0;
 const common_1 = require("@nestjs/common");
 let BasicsService = class BasicsService {
+    historialPrestamos = [];
     myFirstGet() {
         return {
             service: 'Blog Backend API',
             function: 'basics get',
-            message: 'My new Get'
+            message: 'My new Get',
         };
     }
     mySecondGet() {
         return {
             service: 'Blog Backend API',
             function: 'basics get',
-            message: 'My second Get'
+            message: 'My second Get',
         };
     }
     functionWithParameter(parameter) {
@@ -28,14 +29,14 @@ let BasicsService = class BasicsService {
             service: 'Blog Backend API',
             function: 'basics get with parameter',
             message: 'Funcion con parámetro',
-            parameter: parameter
+            parameter: parameter,
         };
     }
     functionWithPost(parameter) {
         return {
             service: 'Blog Backend Api',
             function: 'basics post with body',
-            body: parameter
+            body: parameter,
         };
     }
     updateWithPut(parameter, body) {
@@ -61,26 +62,46 @@ let BasicsService = class BasicsService {
             service: 'Blog Backend API',
             function: 'basics delete with id',
             message: 'Funcion delete con parametro',
-            parameter: parameter
+            parameter: parameter,
         };
     }
-    verificarEdad(data) {
-        if (data.edad >= 18) {
-            return {
-                nombre: data.nombre,
-                edad: data.edad,
-                puedeConducir: true,
-                mensaje: ' Puede obtener licencia de conducir.'
-            };
-        }
-        else {
-            return {
-                nombre: data.nombre,
-                edad: data.edad,
-                puedeConducir: false,
-                mensaje: ' No puede conducir, es menor de edad.'
-            };
-        }
+    areaTrianguloV2(altura, base) {
+        const area = (base * altura) / 2;
+        return {
+            service: 'Blog Backend API',
+            function: 'basics peticion post',
+            message: 'Funcion con parametro',
+            base: base,
+            altura: altura,
+            area: area,
+        };
+    }
+    calcularMayor(parameter) {
+        const mayor = Math.max(parameter.valor1, parameter.valor2, parameter.valor3);
+        return {
+            service: 'Blog Backend API',
+            function: 'basics peticion post',
+            message: 'Funcion con parametro',
+            parameter: parameter,
+            mayor: mayor,
+        };
+    }
+    registrarPrestamo(datos) {
+        const fechaDevolucion = new Date();
+        fechaDevolucion.setDate(fechaDevolucion.getDate() + datos.diasPrestamo);
+        const nuevoPrestamo = {
+            idPrestamo: this.historialPrestamos.length + 1,
+            isbn: datos.isbn,
+            codigoUsuario: datos.codigoUsuario,
+            fechaPrestamo: new Date().toISOString().split('T')[0],
+            fechaDevolucionEstimada: fechaDevolucion.toISOString().split('T')[0],
+        };
+        this.historialPrestamos.push(nuevoPrestamo);
+        return {
+            servicio: 'Biblioteca MP',
+            accion: 'Préstamo Registrado',
+            prestamo: nuevoPrestamo,
+        };
     }
 };
 exports.BasicsService = BasicsService;

@@ -3,10 +3,13 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule } from '@nestjs/config';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
 import { CategoriesModule } from './categories/categories.module';
 import { PostsModule } from './posts/posts.module';
+
+import { BasicsModule } from './basics/basics.module'; // <-- FALTA ESTO
 
 @Module({
   imports: [
@@ -20,12 +23,14 @@ import { PostsModule } from './posts/posts.module';
       database: process.env.DB_NAME,
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: true,
-      //ssl: { rejectUnauthorized: false },//
     }),
+
     AuthModule,
     UsersModule,
     CategoriesModule,
     PostsModule,
+
+    BasicsModule, // <-- AGREGA ESTA LÍNEA
   ],
   controllers: [AppController],
   providers: [AppService],

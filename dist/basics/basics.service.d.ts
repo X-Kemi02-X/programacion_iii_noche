@@ -1,4 +1,5 @@
 export declare class BasicsService {
+    private historialPrestamos;
     myFirstGet(): object;
     mySecondGet(): object;
     functionWithParameter(parameter: string): object;
@@ -6,13 +7,7 @@ export declare class BasicsService {
     updateWithPut(parameter: string, body: object): object;
     functionWithPatch(parameter: string, body: object): object;
     delete(parameter: string): object;
-    verificarEdad(data: {
-        nombre: string;
-        edad: number;
-    }): {
-        nombre: string;
-        edad: number;
-        puedeConducir: boolean;
-        mensaje: string;
-    };
+    areaTrianguloV2(altura: number, base: number): object;
+    calcularMayor(parameter: any): object;
+    registrarPrestamo(datos: any): object;
 }

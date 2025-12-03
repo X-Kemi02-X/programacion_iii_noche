@@ -30,22 +30,27 @@ let BasicsController = class BasicsController {
         return this.basicService.functionWithParameter(myParameter);
     }
     create(bodyData) {
-        return this.basicService
-            .functionWithPost(bodyData);
+        return this.basicService.functionWithPost(bodyData);
     }
     update(id, updateBody) {
-        return this.basicService
-            .updateWithPut(id, updateBody);
+        return this.basicService.updateWithPut(id, updateBody);
     }
     updatePatch(id, updateBody) {
-        return this.basicService
-            .functionWithPatch(id, updateBody);
+        return this.basicService.functionWithPatch(id, updateBody);
     }
     delete(id) {
         return this.basicService.delete(id);
     }
-    verificarLicencia(bodyData) {
-        return this.basicService.verificarEdad(bodyData);
+    areaTrianguloV2(bodyData) {
+        const base = bodyData.base;
+        const altura = bodyData.altura;
+        return this.basicService.areaTrianguloV2(altura, base);
+    }
+    calcularMayor(bodyData) {
+        return this.basicService.calcularMayor(bodyData);
+    }
+    registrarPrestamo(datosPrestamo) {
+        return this.basicService.registrarPrestamo(datosPrestamo);
     }
 };
 exports.BasicsController = BasicsController;
@@ -84,7 +89,7 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], BasicsController.prototype, "update", null);
 __decorate([
-    (0, common_1.Put)(':id'),
+    (0, common_1.Patch)(':id'),
     __param(0, (0, common_1.Param)('id')),
     __param(1, (0, common_1.Body)()),
     __metadata("design:type", Function),
@@ -99,12 +104,26 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], BasicsController.prototype, "delete", null);
 __decorate([
-    (0, common_1.Post)('licencia-conducir'),
+    (0, common_1.Post)('area-triangulo-v2'),
     __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", void 0)
-], BasicsController.prototype, "verificarLicencia", null);
+], BasicsController.prototype, "areaTrianguloV2", null);
+__decorate([
+    (0, common_1.Post)('calcular-mayor'),
+    __param(0, (0, common_1.Body)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", void 0)
+], BasicsController.prototype, "calcularMayor", null);
+__decorate([
+    (0, common_1.Post)('biblioteca/registrar-prestamo'),
+    __param(0, (0, common_1.Body)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", Object)
+], BasicsController.prototype, "registrarPrestamo", null);
 exports.BasicsController = BasicsController = __decorate([
     (0, common_1.Controller)('basics'),
     __metadata("design:paramtypes", [basics_service_1.BasicsService])

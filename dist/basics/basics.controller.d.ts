@@ -1,4 +1,9 @@
 import { BasicsService } from './basics.service';
+interface PrestamoLibroDto {
+    isbn: string;
+    codigoUsuario: string;
+    diasPrestamo: number;
+}
 export declare class BasicsController {
     private readonly basicService;
     constructor(basicService: BasicsService);
@@ -9,13 +14,8 @@ export declare class BasicsController {
     update(id: string, updateBody: object): object;
     updatePatch(id: string, updateBody: object): object;
     delete(id: string): object;
-    verificarLicencia(bodyData: {
-        nombre: string;
-        edad: number;
-    }): {
-        nombre: string;
-        edad: number;
-        puedeConducir: boolean;
-        mensaje: string;
-    };
+    areaTrianguloV2(bodyData: any): object;
+    calcularMayor(bodyData: any): object;
+    registrarPrestamo(datosPrestamo: PrestamoLibroDto): object;
 }
+export {};
